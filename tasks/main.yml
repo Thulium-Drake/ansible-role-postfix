@@ -110,7 +110,7 @@
     group: root
     mode: '0644'
   loop: "{{ postfix_files }}"
-  no_log: "{{ postfix_no_log }}"
+  no_log: true
   loop_control:
     loop_var: file
   notify:

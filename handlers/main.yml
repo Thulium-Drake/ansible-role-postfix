@@ -2,7 +2,7 @@
 - name: Run postmap
   command: postmap /etc/postfix/{{ file['name'] }}
   when: file['postmap'] | default(false) | bool
-  no_log: "{{ postfix_no_log }}"
+  no_log: true
   loop: "{{ postfix_files }}"
   loop_control:
     loop_var: file
