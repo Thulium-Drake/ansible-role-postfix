@@ -15,9 +15,6 @@ postfix_conf: {}
 #     content: '/.+/    user@example.com'
 postfix_files: []
 
-# When handling above files, disable logging in case passwords are processed
-postfix_no_log: true
-
 # Whether to run 'postfix check' before it's started
 postfix_check: true
 
