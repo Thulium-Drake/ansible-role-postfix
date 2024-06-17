@@ -23,3 +23,11 @@
     - name: Assert file is present
       assert:
         that: test_file.stat.exists
+
+    - name: Clean up test files
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /etc/postfix/test
+        - /etc/postfix/test.db
